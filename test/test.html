@@ -3,11 +3,16 @@
 <head>      <!--(3) 페이지를 열 때 해당 문서의 정보(메타데이터) 제공-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TEST PAGE</title>
 </head>
 <body>      <!--(4) -->
-    안 녕 하 세 요
-    AB CD EF GH IJ
-    It's a test code.
+    <input type = "button" name = "test">
+    <label>사용자 입력 정보</label>
+    <input type = "text" size = 30>
+    <div class="relative">
+        <input type = "checkbox" id = "theme-toggle" class="sr-only peer"/>
+        <div class = "block bg-gray-600 w-14 h-8 rounded-full"></div>
+        <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition-transform peer-checked:translate-x-6"></div>
+    </div>
 </body>
 </html>
