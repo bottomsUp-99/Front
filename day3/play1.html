@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 예제</title>
+    <style>
+        /* 애니메이션을 정의하는 @keyframes */
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(1800px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* 박스 스타일 */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: move 1s infinite;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            animation: move 2s infinite;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: relative;
+            animation: move 3s infinite;
+        }
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation: move 4s infinite;
+        }
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            position: relative;
+            animation: move 3s infinite;
+        }
+        .box6 {
+            width: 100px;
+            height: 100px;
+            background-color: orchid;
+            position: relative;
+            animation: move 2s infinite;
+        }
+        .box7 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: relative;
+            animation: move 1s infinite;
+        }
+        .box8 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: relative;
+            animation: move 2s infinite;
+        }
+        .box9 {
+            width: 100px;
+            height: 100px;
+            background-color: saddlebrown;
+            position: relative;
+            animation: move 3s infinite;
+        }
+        .box10 {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            position: relative;
+            animation: move 4s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+</body>
+</html>

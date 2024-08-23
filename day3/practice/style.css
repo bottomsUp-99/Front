@@ -1,0 +1,43 @@
+/* html과 body의 전체 높이를 화면 너비에 맞춤 */
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 헤더 태그 스타일링 */
+header{
+    width: 310px;
+    height: 50px;
+    background-color: #581845;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+main{
+    display: flex;
+}
+nav{
+    width: 100px;
+    height: 200px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+article{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(77, 70, 10);
+    border-radius: 10px;
+    margin-left: 10px;
+}
+footer{
+    width: 310px;
+    height: 50px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin-top: 10px;
+}

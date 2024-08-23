@@ -1,0 +1,10 @@
+#header h1, #header h2{
+    color: red;
+}
+
+#header > h1{
+    color: red;
+}
+#section > h1{
+    color: blue;
+}

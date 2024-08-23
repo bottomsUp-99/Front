@@ -1,0 +1,22 @@
+@media (max-width:1280px){
+    /* 너비가 1280px 이하인 화면에서 배경색을 pink로 보여줘라 */
+    body{
+        background-color: pink;
+    }
+}
+    /* 너비가 600px 이하인 화면에서 배경색을 olive로 보여줘라 */
+@media (max-width:600px){
+        /* 너비가 600px 이하인 화면에서 배경색을 olive 보여줘라 */
+    body{
+        background-color: olive;
+        }
+}
+h1{
+    /* h1 아래에 밑줄을 추가 */
+    /* 각각의 span 요소들 사이가 넓어졌으면 좋겠다 */
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+span{
+    padding: 5px;
+}

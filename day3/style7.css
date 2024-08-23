@@ -1,0 +1,9 @@
+input:enabled{
+    background-color: white;
+}
+input:disabled{
+    background-color: gray;
+}
+input:focus{
+    background-color: orange;
+}
