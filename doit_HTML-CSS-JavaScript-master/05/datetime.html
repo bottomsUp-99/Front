@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>날짜와 시간</title>
+  <link rel="stylesheet" href="datetime.css">
 </head>
 <body>
   <form>
@@ -18,7 +19,12 @@
     <hr>
     <h1>범위 제한하기</h1>
     <input type="date" min="2020-02-01" max="2020-02-15">
-    <input type="time" min="14:00" max="16:00">
+    <input type="time" min="14:00" max="16:00" step="60">
+      <label for="appt-time">
+        Choose an appointment time (opening hours 12:00 to 18:00):
+      </label>
+      <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
+      <span class="validity"></span>
   </form>
 </body>
 </html>
