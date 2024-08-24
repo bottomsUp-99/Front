@@ -1,0 +1,12 @@
+div {
+    margin: 20px; /* 모든 방향에 20px 마진 적용 */
+}
+div {
+    margin-top: 20px;    /* 위쪽 마진 */
+    margin-right: 15px;  /* 오른쪽 마진 */
+    margin-bottom: 10px; /* 아래쪽 마진 */
+    margin-left: 5px;    /* 왼쪽 마진 */
+}
+div {
+    margin: 0 auto; /* 수평 중앙 정렬 (좌우 마진이 자동으로 설정) */
+}
