@@ -62,7 +62,7 @@ body {
 /* name의 스타일 태그입니다. 글자 정렬과 간격을 담당합니다. */
 .name {
     text-align: center;
-    padding-top: 60px;
+    padding-top: 80px;
 }
   
 /* follow button의 스타일 태그입니다. 버튼의 정렬 및 간격을 담당합니다 */
@@ -93,4 +93,5 @@ body {
 /* description의 스타일 태그입니다. 자기소개 간격을 결정합니다. */
 .desc {
     padding: 2rem;
+    text-align: center;
 }
