@@ -1,0 +1,15 @@
+@import "./global.css";
+
+/* 검색바 간격 조정 */
+.find-search-bar-form {
+    padding: 0 25px;
+}
+
+.find-search-bar-form div{
+    width: 100%;
+}
+
+.find-search-bar {
+    margin-top: 20px;
+    background-color: var(--);
+}
