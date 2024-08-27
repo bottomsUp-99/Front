@@ -76,4 +76,5 @@ body {
 /* description의 스타일 태그입니다. 자기소개 간격을 결정합니다. */
 .desc {
     padding: 2rem;
+    text-align: center;
 }
