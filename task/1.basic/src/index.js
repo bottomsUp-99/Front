@@ -31,18 +31,47 @@ const completeFolderTree = function (folderList) {
         folderList[i].addEventListener('click', (event) => {
             // 여기에서 작업하세요.
             const lowerFolder = event.target.parentNode.querySelector('.lower-folder');
-            console.log(lowerFolder);
+            const toggle = event.target.parentNode;
             if(lowerFolder){
                 if(lowerFolder.style.display == 'none'){
                     lowerFolder.style.display = 'block';
+                    if(toggle){
+                        toggle.classList.add('isOpen');
+                    }// 여는 부분
                 }
                 else {
                     lowerFolder.style.display = 'none';
-                }
+                    if(toggle){
+                        toggle.classList.remove('isOpen');
+                    }
+                }// 닫는 부분
+
+                // 하위 폴더도 모두 닫기
+                const downFolders = lowerFolder.querySelectorAll('.lower-folder');
+                downFolders.forEach((downFolder) => {
+                    downFolder.style.display = 'none';
+                    const parentFolder = downFolder.parentNode;
+                    if (parentFolder && parentFolder.classList.contains('isOpen')) {
+                        parentFolder.classList.remove('isOpen');
+                    }
+                });
+
+                // const higherToggle = document.querySelector('.toggle');
+                // if(!higherToggle.classList.contains('isOpen')){
+                //     lowerFolder.forEach((n) => {
+                //         n.parentNode.style.classList.remove('isOpen');
+                //         n.parentNode.style.display = 'none';
+                //     });
+                // }
+
+                // const higherToggle = console.log(folderList[0].parentNode);
+                // if(!higherToggle.classList.contains('isOpen')){
+                //     lowerFolder.forEach((n) => {
+                //         n.parentNode.style.classList.remove('isOpen');
+                //         n.parentNode.style.display = 'none';
+                //     });
+                // }
             }
-            console.log(event.target);
-            console.log(event.target.parentNode);
-            console.log(event.target.parentNode.querySelector('.lower-folder'));
         });
     }
 };
