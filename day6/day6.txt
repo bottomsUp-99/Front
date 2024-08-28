@@ -1,0 +1,197 @@
+1. 자바스크립트 : 웹페이지를 조작하기 위해 만들어졌다.
+
+- 웹페이지의 기본 목적 : 데이터 관리(어딘가에 저장하고 출력하여 정제된 데이터를 활용)
+
+- 변수와 상수(데이터를 담는 메모리)
+    변수(값이 변할 수 있는 메모리) - var, let
+    상수(값이 변할 수 없는 메모리) - const
+
+    데이터를 재사용하고, 해당 데이터에 접근하기 위해 필요하다.
+
+- 변수와 상수를 사용하기 위한 단계
+    1. 선언 : 변수의 이름을 알려주는 행위(let, var, const --> 세가지 키워드를 이용하여 선언한다.)
+    2. 할당 : 변수에 데이터를 담아주는 행위(데이터를 지정된 메모리(변수의 이름)에 저장)
+
+- 변수와 상수의 특징
+    중복으로 선언할 수 있는지에 대한 여부(재선언 여부 or 재할당 여부)
+    var : 재선언 가능, 재할당 가능
+    let : 재선언 불가능, 재할당 가능
+    const : 재선언 불가능, 재할당 불가능
+
+    변수명 지정시 명사로 지정하길 권장
+
+2. 데이터 타입(자료형)
+    문자열(String) -> "", '' 둘다 가능  /  '+' 연결연산자 EX) 'hello'+'123' => 'hello123'
+    숫자(number)
+        - 산술연산자(+,-,*,/,%)
+        숫자가 아닌 다른 데이터타입으로 산술연산자를 사용할 시 NaN(Not a Number) return됨.
+        "a" * 12 => NaN
+        "a" + 12 => "a123"
+
+    Boolean
+    undefined
+    null
+    symbol
+    Bigint
+    Object
+
+3. 배열(Array), 객체(Object)
+    여러개의 데이터가 순서와 함께 저장하고 싶을 때 자료구조(저장창고)
+
+    let makeArr = ["1", "2", null, undefined, Object]
+
+    배열은 데이터의 저장 순서 = 인덱스(index)
+
+    index => 요소에 순서를 부여하고 해당 요소에 접근이 가능하도록 지원
+
+    array.length : 배열의 길이를 제공
+    array.push() : 배열의 가장 뒤에 데이터 추가
+    array.pop() : 배열의 가장 뒤의 데이터 삭제
+    array.includes() : 특정 배열에 주어진 데이터가 포함되었는지 확인
+    array.indexOf() : 특정 배열에서 지정된 요소를 찾을 수 있는 첫번째 인덱스를 반환
+
+4. 객체(Object)
+    const people = ['신세계', 180, 80, 'SSGINC']
+
+    객체는 키값을 통해 데이터가 무엇에 대한 데이터인지 명시해줄 수 있다.
+    객체를 정의시 {}
+    let userData = {
+        name : '신세계',
+        age : 20,
+        height : 180,
+        weight : 80,
+        company : 'SSGINC'
+    }
+
+    객체 안의 데이터를 하나하나를 프로퍼티(property)라고 한다. ==> key와 value 묶은 것.
+
+    객체의 프로퍼티에 접근하기
+    -> 접근하려면 key 값에 접근해서 value를 가지고 온다.
+    Dot notation(점 표기법)
+    Bracket notation(괄호 표기법)
+    userData['age']로 지정해야 객체의 key로 인식하여 처리한다. name => 변수
+
+    객체 메서드(내장 메서드)
+    Object.keys() : 객체의 key만을 가져와 배열에 담아주는 메서드
+    Object.values() : 객체의 value만 가져와 배열에 담아주는 메서드
+
+5. 함수(Function)
+    어떤 기능을 수행하거나 계산을 수행할 수 있는 도구
+    
+    입력데이터(매개변수 또는 파라미터), 입력데이터를 처리(로직 프로세스), 결과데이터(반환 데이터, 리턴값)
+    function sayHello() {
+    console.log('안녕하세요!')
+    }
+
+
+    도구를 활용(함수의 호출) : sayHello()
+
+    HTML의 태그에는 부여할 수 있는 많은 속성(property)이 존재한다.
+    id, class 속성 onClick() ==> 이벤트(event)
+    해당태그에 사용자에 의해 클릭이벤트가 발생했을 때, 할당되어 있는 수식, 코드를 실행하라
+
+6. querySelector(태그 선택) : JS내에서 HTML 요소의 객체값을 참조할 때 사용하는 기능
+
+7. 함수의 리턴(함수 내부에 존재하는 데이터 또는 연산의 결과를 외부로 전달하는 기능)
+    return 명령어를 사용
+    return 뒤에 오는 데이터를 함수를 호출했던 위치로 전달해 준다.
+
+    const sum = function() {  //익명함수 ==> 호이스팅 할 때 다시 설명
+        let result = 10 + 10;
+        return result;
+    }
+    let returnData = sum()
+    console.log(returnData)
+
+8. <ul></ul> <ol></ol> <li></li>
+
+9. DOM : HTML 문서를 파싱(구성된 요소를 분석하고 의미를 이해하여 활용)하여 DOM이라는 트리구조 형태의 생성된 객체
+    DOM Tree(DOM 트리 구조) - 요솔들을 노드(Node)
+    - Document : 문서(document) 노드, DOM에 진입할 수 있는 진입점 역할
+    - HTML : document를 제외하고 최상위의 위치(root node) --> only one
+    - head, body, title, div... --> 요소 노드(element node) : 속성(property)를 가질 수 있는 유일한 노드
+    - src = "...", id = "..."  --> 속성 노드(attribute node)
+    - <p>안녕</p> "안녕" --> 텍스트 노드(Text node), child node, leaf node
+
+    document.getElementsByTagName('p').item(0) -> element노드의 이름을 체크해서 해당 Element를 참조
+    document.getElementById('demo') -> Element 노드의 id를 체크해서 해당 Element 참조
+    document.querySelector(.id(#")) -> id를 기반으로 class(".")를 참조
+    document.querySelectorAll() -> 배열 형태로 모든 요소를 참조
+    document.createElement() -> 새로운 Node 생성. Node 형태는 생성하지만 DOM에 직접 추가하지 않는다.
+    document.appendChild() -> Element Node를 현재 DOM에 추가
+
+    => document를 활용하여 JS 내부로 각각의 Node들을 참조할 수 있다.
+    
+10. 반복문 (while, for, for-in)
+    for(최초식; 조건식; 증감문){
+        최초식 : let i = 0;
+        조건식 : i<10
+        증감문 : i=i+1 i++(--)
+    }
+
+11. for-of (배열에서 주로 사용)
+
+    const arr = [1,2,3,4,5]
+    for(let e of arr){
+        console.log(e)
+    }
+
+    for-in(객체에서 주로 사용)
+    const obj = {name : "otter", gender : "male"}
+    for(let key in obj){console.log(key)}
+
+12. 스코프, 호이스팅
+
+    scope => 전역 스코프, 지역 스코프
+
+    선언된 변수가 어떤 범위까지 유효한지
+    어디서나 접근이 가능한지
+
+    함수 스코프
+    자바 스크립트에서 지역 스코프를 생성하는 종류
+    1. 함수 레벨 scope
+    2. 블록 레벨 scope
+
+    참조 가능한 유효범위의 경계를 조건문, 반복문을 포함한 코드블럭{}으로 할지,
+    오직 함수의 코드 블럭으로 할지
+
+    스코프 체인(Scope Chain)
+    자바스크립트는 렉시컬 스코프 원칙(정적 스코프 Static Scope)를 따른다.
+    함수를 호출한 곳이 아닌 선언한 곳을 기준으로 스코프를 결정한다.
+
+    호이스팅 : 함수, 변수의 선언이 마치 위로 끓어올려진 것처럼 동작하는 것
+
+    변수
+    1. 선언단계 => 초기화단계 => 할당 단계
+    선언 단계 : 선언한 변수를 식별자가 담기는 객체에 할당하는 단계
+    초기화 단계 : 변수에 할당할 메모리 공간을 부여하는 단계
+    할당 단계 : 정의된 변수에 데이터가 할당되는 단계(식별자 == 변수명)
+
+    let, const : 선언단계에서 초기화단계로 가는 과정을 TDZ(Temporal Dead Zone)이라 함.
+    var : 선언단계 -> 초기화단계 -> 할당단계
+
+    for(let i = 0; i<6; i++){
+        let a = "123";
+        if(i > 3){
+            let a = "asd";
+            console.log(a);
+        }
+        let b = "123";
+    }
+
+    for(let i = 0; i<6; i++){
+        let a = "123";
+        if(i > 3){
+            console.log(a);
+        }
+        let b = "123";
+    }
+
+    for(let i=0;i<6; i++){
+    let a ="a";
+    if(i>3){
+        console.log(a);
+        }
+    a=5;
+    }
+

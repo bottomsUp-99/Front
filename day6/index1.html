@@ -1,0 +1,50 @@
+<style>
+    div {
+  background-color: blue;
+  margin: 1rem 0;
+  height: 100px;
+  width: 200px;
+}
+</style>
+<script>
+    const container = document.querySelector("#container");
+const log = document.querySelector("#log");
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function setBackgroundColor(id) {
+  log.textContent = "";
+
+  try {
+    const element = container.querySelector(`#${id}`);
+    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    element.style.backgroundColor = randomColor;
+  } catch (e) {
+    log.textContent = e;
+  }
+}
+
+document.querySelector("#no-escape").addEventListener("click", () => {
+  setBackgroundColor("this?element");
+});
+
+document.querySelector("#css-escape").addEventListener("click", () => {
+  setBackgroundColor(CSS.escape("this?element"));
+});
+
+document.querySelector("#manual-escape").addEventListener("click", () => {
+  setBackgroundColor("this\\?element");
+});
+
+</script>
+<div id="container">
+    <div id="this?element"></div>
+  </div>
+  
+  <button id="no-escape">No escape</button>
+  <button id="css-escape">CSS.escape()</button>
+  <button id="manual-escape">Manual escape</button>
+  
+  <pre id="log"></pre>
