@@ -1,0 +1,5 @@
+@media screen and (orientation: landscape) {
+    body {
+        background-color: rgb(255, 123, 0);
+    }
+}

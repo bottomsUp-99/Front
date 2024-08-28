@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth();
+        let day = date.getDate();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        alert('time : ' + year + '.' +(month + 1)+ '.' + day+ '.' + hours+ '.' + minutes+ '.' + seconds);
+        if(hours < 12){
+            alert('오전');
+        }
+        if(hours >= 12){
+            alert('오후');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
