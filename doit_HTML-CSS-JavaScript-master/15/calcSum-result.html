@@ -12,12 +12,16 @@
 
       for(let i = 1; i < n+1; i++) {						
         sum += i;	
+        console.log(sum);
       }
       document.write("1부터 " + n + "까지 더하면 " + sum);
     }    
     
     var userNumber = prompt("얼마까지 더할까요?");
-    if(userNumber != null) calcSum(userNumber);
+    if(userNumber != null) {
+      calcSum(Number(userNumber)); // prompt로 받으면 문자열로 받기 때문에 따로 Number나 pareInt로 형변환 해줘야 함.
+      calcSum(parseInt(userNumber));
+    }
 	</script>
 </body>
 </html>
